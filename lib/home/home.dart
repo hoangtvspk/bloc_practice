@@ -2,6 +2,8 @@ import 'package:bloc_practice/counter/counter.dart';
 import 'package:bloc_practice/timer/timer.dart';
 import 'package:flutter/material.dart';
 
+import '../infinite_list/view/posts_page.dart';
+
 class Home extends StatefulWidget {
   const Home({super.key});
 
@@ -103,6 +105,19 @@ class _HomeState extends State<Home> {
               onClick: () {
                 Navigator.push(
                     context, MaterialPageRoute(builder: (_) => CounterPage()));
+              },
+            ),
+            SizedBox(
+              height: 8,
+            ),
+            ExpBox(
+              thumbnail: 'assets/images/infinite_loading.jpg',
+              title: "Infinite Loading",
+              boxColor: Colors.blue[200],
+              borderColor: Colors.blue[400],
+              onClick: () {
+                Navigator.push(
+                    context, MaterialPageRoute(builder: (_) => PostsPage()));
               },
             ),
           ],
